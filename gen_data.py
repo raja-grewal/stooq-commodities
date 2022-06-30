@@ -4,7 +4,7 @@ usage:                          python gen_data.py
 python version:                 3.10
 pandas-datareader version:      0.10
 
-code style:                     black==22.3
+code style:                     black==22.6
 import style:                   isort==5.10
 
 Description:
@@ -23,7 +23,7 @@ Instructions:
     1. Select appropriate start and end date for data for all assets with daily data
        sampling frequency.
     2. Enter into the dictionary the obtained Stooq symbols for desired assets and
-       place them in lisst following the naming scheme.
+       place them in list following the naming scheme.
     3. Running file will scrape data and place it in a directory containing pickle
        and csv files, along with cleaned NumPy arrays.
 
@@ -64,11 +64,10 @@ from utils import dataframe_to_array, market_data_tests
     AS OF THE TIMING OF THIS MOST RECENT COMMIT, STOOQ NO LONGER ALLOWS THE
     DOWNLOADING OF COMMODITIES DATA AND SO THEY WILL RETURN AN ERROR.
     https://github.com/pydata/pandas-datareader/issues/925
-    https://github.com/rajabinks/stooq-commodities
     ********************************************************************************
 """
 
-# common starting/endiing dates for daily data collection for all assets
+# common starting/ending dates for daily data collection for all assets
 start: str = "1985-10-01"
 end: str = "2022-02-10"
 
