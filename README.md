@@ -12,23 +12,23 @@ We provide seven sets of databases outlined in the table below. Note the count r
 
 These include the equity indices S\&P500 (SPX), Nasdaq 100 (NDX), Dow Jones Industrial Average (DJIA), along components of the DJIA. For commodities, we provide front month futures contract prices for gold, silver, high grade copper, platinum, palladium, WTI crude oil, RBOB gasoline, lumber, live cattle, coffee, and orange juice. The included 25 of total 30 DJIA components in DJI are not exactly the 26 in Full due to additions and removals to the index.
 
-|  | Components | Count | Start Date |
-| ----------- | ----------- | ----------- | ----------- |
+|  | Components | Count | Start Date | End Date |
+| ----------- | ----------- | ----------- | ----------- | ----------- |
 | **Equity Indices**
-| SNP | SPX | 9,167 |1985-10-01 |
-| USEI | SPX + NDX, DJIA | 9,167 | 1985-10-01 |
-| DJI | USEI + 25 DJIA Components | 8,024 | 1990-03-26 |
+| SNP | SPX | 9,167 |1985-10-01 | 2022-02-10 |
+| USEI | SPX + NDX, DJIA | 9,167 | 1985-10-01 | 2022-02-10 |
+| DJI | USEI + 25 DJIA Components | 8,024 | 1990-03-26 | 2022-02-10 |
 | **Broader Markets**
-| Minor | USEI + Gold, Silver, WTI | 9,090 | 1985-10-01 |
-| Medium | Minor + Cooper, Platinum, Lumber | 9,077 | 1985-10-01 |
-| Major | Medium + Palladium, RBOB, Cattle, Coffee, OJ | 8,990 | 1985-10-01 |
-| Full | Major + 26 DJIA Components |7,858 | 1990-03-26 |
+| Minor | USEI + Gold, Silver, WTI | 9,090 | 1985-10-01 | 2021-12-24 |
+| Medium | Minor + Cooper, Platinum, Lumber | 9,077 | 1985-10-01 | 2021-12-24 |
+| Major | Medium + Palladium, RBOB, Cattle, Coffee, OJ | 8,990 | 1985-10-01 | 2021-12-24 |
+| Full | Major + 26 DJIA Components |7,858 | 1990-03-26 | 2021-12-24 |
 
-Overall, these consist of daily time series of prices spanning from the earlier of either the first available date or the 10th October 1985. The closing dates are 10th February 2022 for Equity Indices and 24th December 2021 for Broader Markets. Equity indices can be updated whereas Broader Markets are not updatable as explained in the [issue](https://github.com/pydata/pandas-datareader/issues/925).
+Overall, these consist of daily time series of prices spanning from the earlier of either the first available date or the 10th October 1985. Equity indices can be updated whereas Broader Markets are not updatable as explained in the [issue](https://github.com/pydata/pandas-datareader/issues/925).
 
 Initialising the code involves the following commands:
 ```commandline
-git clone https://github.com/rajabinks/stooq-commodities.git
+git clone https://github.com/raja-grewal/stooq-commodities.git
 
 cd stooq-commodities
 ```
