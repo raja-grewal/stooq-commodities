@@ -1,4 +1,6 @@
 """
+Copyright (C) 2022 J. S. Grewal <rg_public@proton.me>
+
 title:                  utils.py
 python version:         3.10
 
