@@ -59,7 +59,7 @@ import numpy as np
 import pandas as pd
 import pandas_datareader.data as pdr
 
-from utils import dataframe_to_array, market_data_tests
+from utils import dataframe_to_array, market_data_tests, single_asset_histories
 
 """
     ********************************************************************************
@@ -72,6 +72,9 @@ from utils import dataframe_to_array, market_data_tests
 # common starting/ending dates for daily data collection for all assets
 start: str = "1985-10-01"
 end: str = "2022-02-10"
+
+# save data for all singular assets using False == 0 and True == 1
+SAVE_SINGLES = 1
 
 # fmt: off
 
@@ -133,8 +136,22 @@ if __name__ == "__main__":
     # market price type (Open, High, Low, or Close)
     price_type = "Close"
 
+    #  relative directory for saving single asset price histories
+    path_singles = path + "singles/"
+    # market price type (Open, High, Low, or Close) for singles
+    price_type_singles = "Close"
+
     # CONDUCT TESTS
-    market_data_tests(start, end, stooq, path, price_type)
+    market_data_tests(
+        start,
+        end,
+        SAVE_SINGLES,
+        stooq,
+        path,
+        path_singles,
+        price_type,
+        price_type_singles,
+    )
 
     if not os.path.exists(path):
         os.makedirs(path)
@@ -158,3 +175,16 @@ if __name__ == "__main__":
                 name, prices.shape[1], prices.shape[0]
             )
         )
+
+    if SAVE_SINGLES:
+
+        if not os.path.exists(path_singles):
+            os.makedirs(path_singles)
+
+        market_1 = pd.read_pickle(path + "stooq_major.pkl")
+        market_2 = pd.read_pickle(path + "stooq_dji.pkl")
+
+        datasets = [market_1, market_2]
+
+        for market in datasets:
+            single_asset_histories(market, price_type_singles, path_singles)
