@@ -204,9 +204,9 @@ def single_asset_histories(
 
         n_days = asset.index.shape[0]
 
-        history = np.empty((n_days,), dtype=np.float64)
+        history = np.empty((n_days, 1), dtype=np.float64)
 
-        history[:] = asset
+        history[:, 0] = asset
 
         np.save(path_singles + "stooq_" + label, history)
 
