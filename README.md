@@ -15,7 +15,7 @@ These include the equity indices S\&P500 (SPX), Nasdaq 100 (NDX), Dow Jones Indu
 |  | Components | Count | Start Date | End Date |
 | ----------- | ----------- | ----------- | ----------- | ----------- |
 | **Equity Indices**
-| SNP | SPX | 9,167 |1985-10-01 | 2022-02-10 |
+| SNP | SPX | 9,167 | 1985-10-01 | 2022-02-10 |
 | USEI | SPX + NDX, DJIA | 9,167 | 1985-10-01 | 2022-02-10 |
 | DJI | USEI + 25 DJIA Components | 8,024 | 1990-03-26 | 2022-02-10 |
 | **Broader Markets**
@@ -32,21 +32,22 @@ git clone https://github.com/raja-grewal/stooq-commodities.git
 
 cd stooq-commodities
 ```
-Install all required packages with or without dependencies using:
-```commandline
-pip3 install -r requirements.txt
 
+Install all required packages without dependencies using:
+```commandline
 pip3 install -r requirements--no-deps.txt
 ```
+
 Historical financial market data is sourced and aggregated using:
 ```commandline
 python gen_data.py
 ```
+
 The `.pkl` dataframes and `.csv` files are equivalent, while the `.npy` arrays are cleaned such that only dates where all assets have prices are included. The `.npy` files are also always ordered where earlier dates are indexed first, whereas the ordering in `.pkl` and `.csv` files is dependent on the communication between the Stooq API and relevant packages.
 
 Additionally, due to requests we also provide the same data for each singular asset contained in the "DJI" and "Major" databases. Note that the arrays for each of these may not be synchronised temporally due to the placement of removed of missing values.
 
 ##  We Are Using GitHub Under Protest
-This project is currently hosted on GitHub.  This is not ideal; GitHub is a proprietary, trade-secret system that is not Free and Open Souce Software (FOSS).  We are deeply concerned about using a proprietary system like GitHub to develop our FOSS project.  We urge you to read about the [Give up GitHub](https://GiveUpGitHub.org) campaign from [the Software Freedom Conservancy](https://sfconservancy.org) to understand some of the reasons why GitHub is not a good place to host FOSS projects.
+This project is currently hosted on GitHub. This is not ideal; GitHub is a proprietary, trade-secret system that is not Free and Open Souce Software (FOSS).  We are deeply concerned about using a proprietary system like GitHub to develop our FOSS project. We urge you to read about the [Give up GitHub](https://GiveUpGitHub.org) campaign from [the Software Freedom Conservancy](https://sfconservancy.org) to understand some of the reasons why GitHub is not a good place to host FOSS projects.
 
-Any use of this project's code by GitHub Copilot, past or present, is done without our permission.  We do not consent to GitHub's use of this project's code in Copilot.
+Any use of this project's code by GitHub Copilot, past or present, is done without our permission. We do not consent to GitHub's use of this project's code in Copilot.
