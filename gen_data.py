@@ -1,13 +1,15 @@
 """
 Copyright (C) 2022 J. S. Grewal <rg_public@proton.me>
 
-title:                          gen_data.py
-usage:                          python gen_data.py
-python version:                 3.10
-pandas-datareader version:      0.10
+Title:                  gen_data.py
+Usage:                  python gen_data.py
 
-code style:                     black==22.6
-import style:                   isort==5.10
+Versioning:
+    python              3.10
+    black               22.6
+    isort               5.10
+
+    pandas-datareader   0.10
 
 Description:
     Collects market data from online sources and creates NumPy arrays ready for

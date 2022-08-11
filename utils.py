@@ -1,11 +1,12 @@
 """
 Copyright (C) 2022 J. S. Grewal <rg_public@proton.me>
 
-title:                  utils.py
-python version:         3.10
+Title:                  utils.py
 
-code style:             black==22.6
-import style:           isort==5.10
+Versioning:
+    python              3.10
+    black               22.6
+    isort               5.10
 
 Description:
     Responsible for conducting tests on all user inputs and providing the
