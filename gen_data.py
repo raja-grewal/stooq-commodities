@@ -6,7 +6,7 @@ Usage:                  python gen_data.py
 
 Versioning:
     python              3.10
-    black               22.6
+    black               22.8
     isort               5.10
 
     pandas-datareader   0.10
@@ -138,7 +138,7 @@ if __name__ == "__main__":
     # market price type (Open, High, Low, or Close)
     price_type = "Close"
 
-    #  relative directory for saving single asset price histories
+    # relative directory for saving single asset price histories
     path_singles = path + "singles/"
     # market price type (Open, High, Low, or Close) for singles
     price_type_singles = "Close"

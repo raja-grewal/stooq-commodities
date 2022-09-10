@@ -5,7 +5,7 @@ Title:                  utils.py
 
 Versioning:
     python              3.10
-    black               22.6
+    black               22.8
     isort               5.10
 
 Description:
