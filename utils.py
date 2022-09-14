@@ -40,7 +40,8 @@ def market_data_tests(
     price_type_singles: str,
 ) -> None:
     """
-    Conduct tests prior to scrapping historical financial data from Stooq.
+    Conduct tests on all user inputs prior to scrapping historical financial data
+    from Stooq.
 
     Parameters:
         start: start data
@@ -86,9 +87,10 @@ def market_data_tests(
     for x in stooq:
         mkt = stooq[str(x)]
         assert isinstance(mkt, list), tl
-        assert len(mkt) == 2, "mkt must have at least one number symbol"
+        assert len(mkt) == 2, "mkt must be of length 2"
         assert isinstance(mkt[0], str), ts
         assert isinstance(mkt[1], list), tl
+        assert len(mkt[1]) >= 1, "mkt must contain at least one asset"
         assert len(mkt[1]) == len(set(mkt[1])), "mkt must contain only unique elements"
         assert all(isinstance(a, str) for a in mkt[1]), ts
 

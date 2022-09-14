@@ -12,8 +12,8 @@ Versioning:
     pandas-datareader   0.10
 
 Description:
-    Collects market data from online sources and creates NumPy arrays ready for
-    agent learning. All data is remotely (and freely) obtained using pandas-datareader
+    Collects and cleans raw market data from online sources for further processing.
+    All data is remotely (and freely) obtained using pandas-datareader
     following https://pydata.github.io/pandas-datareader/remote_data.html.
 
     Historical data for major indices, commodities, and currencies is obtained from
@@ -83,6 +83,9 @@ SAVE_SINGLES = 1
 stooq: dict = {
     # pairs for data saving and assets to be included
     # market_id: [market_name, included assets (List[str])]
+
+    # template for creating a new bundle consisting of assets 0 -> n:
+    # "mktX": ["bundle_name", ["asset_0", ..., "asset_n"]]
 
     "mkt0": ["snp", ["^SPX"]],
 
