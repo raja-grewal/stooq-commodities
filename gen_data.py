@@ -39,13 +39,13 @@ Stooq - Symbols and Data Availability:
     GC.F: Gold - COMEX                  https://stooq.com/q/d/?s=gc.f
     SI.F: Silver - COMEX                https://stooq.com/q/d/?s=si.f
     HG.F: High Grade Copper - COMEX     https://stooq.com/q/d/?s=hg.f
-    PL.F: Platinum - NYMEX              https://stooq.com/q/d/?s=pf.f
+    PL.F: Platinum - NYMEX              https://stooq.com/q/d/?s=pl.f
     PA.F: Palladium - NYMEX             https://stooq.com/q/d/?s=pa.f
 
     CL.F: Crude Oil WTI - NYMEX         https://stooq.com/q/d/?s=cl.f
     RB.F: Gasoline RBOB - NYMEX         https://stooq.com/q/d/?s=rb.f
 
-    LS.F: Lumber - CME                  https://stooq.com/q/d/?s=ls.f
+    LS.F: Lumber Random Length - CME    https://stooq.com/q/d/?s=ls.f
     LE.F: Live Cattle - CME             https://stooq.com/q/d/?s=le.f
     KC.F: Coffee - ICE                  https://stooq.com/q/d/?s=kc.f
     OJ.F: Orange Juice - ICE            https://stooq.com/q/d/?s=oj.f

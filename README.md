@@ -3,6 +3,7 @@
 [![License](https://img.shields.io/badge/License-MIT-green)](https://github.com/rajabinks/stooq-commodities/blob/master/LICENSE)
 [![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
 [![Imports: isort](https://img.shields.io/badge/%20imports-isort-%231674b1?style=flat&labelColor=ef8336)](https://pycqa.github.io/isort/)
+[![Imports: isort](https://img.shields.io/github/last-commit/raja-grewal/stooq-commodities.svg)](https://github.com/raja-grewal/stooq-commodities/commits/master)
 
 Due to the [issue](https://github.com/pydata/pandas-datareader/issues/925) regarding the downloading of commodity prices from [Stooq](https://stooq.com/) using [pandas-datareader](https://pandas-datareader.readthedocs.io/en/latest/index.html), this repository stores a limited archive of previously obtained data.
 
@@ -45,7 +46,7 @@ python gen_data.py
 
 The `.pkl` dataframes and `.csv` files are equivalent, while the `.npy` arrays are cleaned such that only dates where all assets have prices are included. The `.npy` files are also always ordered where earlier dates are indexed first, whereas the ordering in `.pkl` and `.csv` files is dependent on the communication between the Stooq API and relevant packages.
 
-Additionally, due to requests we also provide the same data for each singular asset contained in the "DJI" and "Major" databases. Note that the arrays for each of these may not be synchronised temporally due to the placement of removed of missing values.
+Additionally, due to requests we also provide the same data for each singular asset contained in the "DJI" and "Major" databases. Note that the arrays are not temporally synchronised across assets belonging to each set due to the positioning of removed of missing set values.
 
 ##  We Are Using GitHub Under Protest
 This project is currently hosted on GitHub. This is not ideal; GitHub is a proprietary, trade-secret system that is not Free and Open Souce Software (FOSS).  We are deeply concerned about using a proprietary system like GitHub to develop our FOSS project. We urge you to read about the [Give up GitHub](https://GiveUpGitHub.org) campaign from [the Software Freedom Conservancy](https://sfconservancy.org) to understand some of the reasons why GitHub is not a good place to host FOSS projects.
