@@ -3,7 +3,7 @@
 [![License](https://img.shields.io/badge/License-MIT-green)](https://github.com/rajabinks/stooq-commodities/blob/master/LICENSE)
 [![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
 [![Imports: isort](https://img.shields.io/badge/%20imports-isort-%231674b1?style=flat&labelColor=ef8336)](https://pycqa.github.io/isort/)
-[![Imports: isort](https://img.shields.io/github/last-commit/raja-grewal/stooq-commodities.svg)](https://github.com/raja-grewal/stooq-commodities/commits/master)
+[![](https://img.shields.io/github/last-commit/raja-grewal/stooq-commodities.svg)](https://github.com/raja-grewal/stooq-commodities/commits/master)
 
 Due to the [issue](https://github.com/pydata/pandas-datareader/issues/925) regarding the downloading of commodity prices from [Stooq](https://stooq.com/) using [pandas-datareader](https://pandas-datareader.readthedocs.io/en/latest/index.html), this repository stores a limited archive of previously obtained data.
 
