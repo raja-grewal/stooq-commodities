@@ -6,7 +6,7 @@ Usage:                  python gen_data.py
 
 Versioning:
     python              3.10
-    black               22.8
+    black               22.10
     isort               5.10
 
     pandas-datareader   0.10
